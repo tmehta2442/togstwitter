@@ -1,0 +1,15 @@
+3.2.1
+
+update spec_helper.rb to have:
+RSpec.configure do |config|
+  include Capybara::DSL
+  # 
+
+via:
+https://github.com/jnicklas/capybara/issues/1177
+
+3.3.2
+update to bring back application.html.erb to the layouts
+
+per:
+http://stackoverflow.com/questions/13897970/rspec-failure-static-pages-x-should-have-title-x-tried-with-have-xpath-h
