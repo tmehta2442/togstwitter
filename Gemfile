@@ -9,6 +9,7 @@ group :development, :test do
 
 	gem 'sqlite3'
 	gem 'rspec-rails'
+	gem 'annotate'
 end
 
 # Gems used only for assets and not required
