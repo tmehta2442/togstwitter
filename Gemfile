@@ -10,6 +10,7 @@ group :development, :test do
 	gem 'sqlite3'
 	gem 'rspec-rails'
 	gem 'annotate'
+
 end
 
 # Gems used only for assets and not required
@@ -28,6 +29,7 @@ gem 'jquery-rails'
 
 group :test do
 	gem 'capybara', '1.1.2'
+	gem 'factory_girl_rails'
 end
 
 group :production do
