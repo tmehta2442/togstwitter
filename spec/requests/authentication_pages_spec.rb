@@ -21,8 +21,8 @@ describe "Authentication" do
 			it { should have_selector('div.alert.alert-error', text: 'Invalid') }
 
 			describe "after visiting another page" do
-				before { click_link "home" }
-				it { should_not have_selector('div.alter.alert-error') }
+				before { click_link "Home" }
+				it { should_not have_selector('div.alert.alert-error') }
 			end
 		end
 
@@ -33,13 +33,15 @@ describe "Authentication" do
 				fill_in "Password", with:user.password 
 				click_button "Sign in"
 			end
-
 			it { should have_selector('title', text: user.name) }
 			it { should have_link('Profile', href: user_path(user)) }
 			it { should have_link('Sign out', href: signout_path) }
 			it { should_not have_link('Sign in', href: signin_path) }
+
+			describe "followed by signout" do
+				before { click_link "Sign out" }
+				it { should have_link('Sign in') }
+			end
 		end
 	end
-
-
 end
