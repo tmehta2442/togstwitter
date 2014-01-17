@@ -8,7 +8,7 @@ describe User do
   end
 
   subject { @user }
-
+#refactor => array
   it { should respond_to(:name) }
   it { should respond_to(:email) }
   it { should respond_to(:password_digest) }
